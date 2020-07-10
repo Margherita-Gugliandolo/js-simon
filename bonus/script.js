@@ -22,7 +22,15 @@ console.log('array computer',arrayCPU);
 alert('ricorda questi numeri: ' + arrayCPU);
 
 // Setto il timer
-
+var numeroIniziale = 30;
+var intervallo = setInterval(function(){
+  document.getElementById('conto').innerHTML = numeroIniziale;
+   if(numeroIniziale==0){
+     clearInterval(intervallo);
+   }else{
+     numeroIniziale --;
+   }
+},1000);
 
 var myTimer = setTimeout(function() {
 
@@ -60,7 +68,7 @@ var numIndovinati = [];
       console.log("Hai indovinato " + punteggio + " numeri su 5: " + numIndovinati);
       }
 
-}, 30000);
+}, 31000);
 
 
 
